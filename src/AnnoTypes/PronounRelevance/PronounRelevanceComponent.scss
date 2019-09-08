@@ -1,0 +1,115 @@
+.pronoun-relevance {
+    height: 100%;
+    padding: 10px;
+
+    button + button {
+        margin-right: 10px;
+    }
+
+    .pronoun-relevance-control-bar {
+        & + .pronoun-relevance-control-bar {
+            margin-top: 10px;
+        }
+    }
+
+    .control-group {
+        margin-top: 10px;
+        text-align: right;
+
+        button + button {
+            margin-left: 10px;
+        }
+    }
+
+    .annotation {
+        text-align: right;
+    }
+}
+
+.pronoun-relevance-board {
+    height: 100%;
+    
+    .pronoun-relevance-sentences {
+        height: 100%;
+        overflow: auto;
+
+        &>.group-wrapper {
+            border: 0px;
+            padding: 4px 3px;
+            display: block;
+        }
+    }
+}
+
+.group-wrapper, .word-wrapper {
+    font-size: 15px;
+    display: inline-block;
+    padding: 0 3px;
+    user-select: none;
+    
+    &.highlight {
+        background: #C5CAE9;
+        cursor: pointer;
+    }
+
+    &.bold {
+        font-weight: bold;
+    }
+
+    &.sameword {
+        background: rgba(217, 217, 217, 0.3);
+    }
+
+    &.suggesting {
+        background: rgba(234, 238, 8, 0.6) !important;
+        border: 4px solid rgb(1, 168, 180);
+    }
+}
+
+.group-wrapper {
+    margin: 1px;
+    border: 2px solid;
+    background: #FFFFFF;
+
+    &.deleting {
+        background: rgba(244, 67, 54, .6) !important;
+    }
+
+    .subscript {
+        font-size: 9px;
+    }
+}
+
+.compare-board {
+    box-sizing: border-box;
+    height: 98%;
+
+    .compare-area {
+        height: 98%;
+    }
+
+    .compare-board-column {
+        height: 98%;
+
+        & + .compare-board-column {
+            padding-left: 10px;
+            display: flex;
+            flex-direction: column;
+            overflow: auto;
+        }
+    }
+
+
+    .falsy-section {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1%;
+        height: 32%;
+        background: #FFF;
+        padding: 5px;
+
+        ul {
+            overflow-y: auto;
+        }
+    }
+}
