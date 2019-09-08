@@ -56,4 +56,4 @@ $ npm start
 
 **Notice** : ```Click any of those words, those related words in other panels will be highlighted```
 
-![image](http://gitlab.yitu-inc.com/coref/debug-tool/raw/master/img/debug_tool.png)
+![Example](/img/debug_tool.png)
