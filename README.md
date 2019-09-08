@@ -2,7 +2,7 @@ Coref Model Analyzer Debug Tool
 ----
 ### Introduction
 * This is an debug tool to analyzing coref model result
-* To get model result, see [preCo:PreCo: A Large-scale Dataset in Preschool Vocabulary for Coreference Resolution](http://gitlab.yitu-inc.com/coref/coref)
+* We've used it to analyze our PreCo dataset, see [PreCo: A Large-scale Dataset in Preschool Vocabulary for Coreference Resolution](https://arxiv.org/pdf/1810.09807.pdf)
 
 ### Environment
 Make sure you have npm v6.4.1 or later installed
