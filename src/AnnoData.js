@@ -22,7 +22,7 @@ const comp_props =
     },
   "test1":{
     "annoResultState": {
-      "anno_result": [
+      "model_result": [
         [
           [
             0,
@@ -937,7 +937,7 @@ const comp_props =
             "!"
           ]
         ],
-        "gt_result": [
+        "ground_truth": [
           [
             [
               0,
@@ -1462,8 +1462,7 @@ const comp_props =
             ]
           ]
         ],
-        "is_gt": true
-      }
+      },
     },
     "mention_scores": {
       "0_0_5": -0.82,
@@ -6417,7 +6416,7 @@ const comp_props =
   },
   "RACE_high10042.json":{
     "annoResultState": {
-      "anno_result": [
+      "model_result": [
         [
           [
             1,
@@ -6604,7 +6603,7 @@ const comp_props =
       ],
       "taskFile": {
         "_id": "RACE_high10042.json",
-        "gt_result": [
+        "ground_truth": [
           [
             [
               0,

@@ -73,10 +73,10 @@ class PronounRelevanceCompareBoard extends Component {
 
 
       //this.init(nextProps);
-      const { annoResultState: { taskFile, anno_result } } = nextProps;
-      this._annoStore = new PronounRelevanceStore(taskFile.sentence, anno_result);
-      const { annoResultState: { taskFile: {gt_result } } } = nextProps;
-      this._gtStore = new PronounRelevanceStore(taskFile.sentence, gt_result);
+      const { annoResultState: { taskFile, model_result } } = nextProps;
+      this._annoStore = new PronounRelevanceStore(taskFile.sentence, model_result);
+      const { annoResultState: { taskFile: {ground_truth } } } = nextProps;
+      this._gtStore = new PronounRelevanceStore(taskFile.sentence, ground_truth);
 
       this.setState({
         userAnswer: this._annoStore,
@@ -625,22 +625,22 @@ class PronounRelevanceCompareBoard extends Component {
         </Row>
         <Col span={5} className="compare-board-column">
           <section className="falsy-section">
-            <h3>False Negative 漏标</h3>
+            <h3>False Negative (Missed Coreferences/Mentions)</h3>
             <ul>{this.renderFalsy('negative')}</ul>
           </section>
           <section className="falsy-section">
-            <h3>False Positive 多标</h3>
+            <h3>False Positive (Wrong Coreferences/Mentions)</h3>
             <ul>{this.renderFalsy('positive')}</ul>
           </section>
           <section className="falsy-section">
-            <h3>Match 完全相同</h3>
+            <h3>Match</h3>
             <ul>{this.renderFalsy('match')}</ul>
           </section>
         </Col>
         <Col span={14} className="compare-board-column">
           <Row className="compare-area">
             <Col span={12}>
-              <h3>gt answer</h3>
+              <h3>Ground Truth</h3>
               <PronounRelevanceBoard
                 ref="left"
                 store={gtAnswer}
@@ -650,7 +650,7 @@ class PronounRelevanceCompareBoard extends Component {
               />
             </Col>
             <Col span={12}>
-              <h3>model answer</h3>
+              <h3>Model Results</h3>
               <PronounRelevanceBoard
                 ref="right"
                 store={userAnswer}

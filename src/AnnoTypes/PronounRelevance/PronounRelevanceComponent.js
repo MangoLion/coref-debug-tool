@@ -36,16 +36,16 @@ class PronounRelevanceComponent extends Component {
     );
 
     const filename = filelist.reverse().pop();
-    const { annoResultState: { taskFile, anno_result } } = props[filename];
+    const { annoResultState: { taskFile, model_result } } = props[filename];
     const { globalControl } = props;
 
 
-    this._annoStore = new PronounRelevanceStore(taskFile.sentence, anno_result);
+    this._annoStore = new PronounRelevanceStore(taskFile.sentence, model_result);
     this._store = this._annoStore;
 
     if (globalControl.showGroundTruth) {
-      const { annoResultState: { taskFile: {gt_result} } } = props[filename];
-      this._gtStore = new PronounRelevanceStore(taskFile.sentence, gt_result);
+      const { annoResultState: { taskFile: {ground_truth} } } = props[filename];
+      this._gtStore = new PronounRelevanceStore(taskFile.sentence, ground_truth);
     }
   };
 
