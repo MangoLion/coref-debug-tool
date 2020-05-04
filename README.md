@@ -1,54 +1,16 @@
-Coref Model Analyzer Debug Tool
-----
-### Introduction
-* This is an debug tool to analyzing coref model result
-* To get model result format, see [PreCo: A Large-scale Dataset in Preschool Vocabulary for Coreference Resolution](https://preschool-lab.github.io/PreCo/)
+# Coref Model Analyzer Debug Tool - Temporary Working Version
 
-### Environment
-Make sure you have npm v6.4.1 or later installed
+## Description
+The [original github project](https://github.com/MangoLion/coref-debug-tool) has been rendered completely unsusable due to the corrupted package.json file making it impossible to setup the project at all. [Issue link](https://github.com/preschool-lab/coref-debug-tool/issues/1)
 
-### Getting Started
-#### Installation
-To install the dependencies required to compile, run:
-```sh
-$ npm install
-```
+To debug my model results from using the preco dataset, I have attempted to manually install the missing packages, setup react app and other needed frameworks.
 
-#### Configuration
-Put model result data into ```src/AnnoData.js```.
-The data structure is like:
-```
-globalControl                           //constants
-|
-|
-first_file_data
-|       +---- annoResultState
-|             |
-|             +--- model_result          //model result
-|             +--- taskFile             
-|                  |
-|                  +--- _id             //file name
-|                  +--- sentence        
-|                  +--- ground_truth
-|       +----- mention_scores
-|       +----- antecedent_scores
-|       
-second_file_data
-|
-……
-```
-#### Run
-```sh
-# This will run a server at http://localhost:3000
-$ npm start
-```
-#### Features
-* Choose File: show the list of file data name, can be configured in ```src/AnnoData.js```, ```default: first file```
-* Left Side: show the Missed/Wrong/Matched mention list
-* Ground Truth: mention and coreferences in Ground Truth.
-* Model Results: mention and coreferences in Model Results.
-* Right Side: can be sorted by position or by score, click one mention, related Antecedent Score will be shown on the next block.
+Since it is impossible to build with react, a "snapshot" build from src and public folder was moved to a new react app. The app should function with some errors.
 
-**Notice** : ```Click any of those words, those related words in other panels will be highlighted```
+## Installation
 
-![image](/img/debug_tool.png)
+``npm install``
+
+## Running
+
+``npm start``
